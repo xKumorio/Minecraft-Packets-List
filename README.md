@@ -1,6 +1,6 @@
 # Packet ID Reference
 
-Automatically generated for version 1.21.10
+Automatically generated for 1.21.10
 
 ## Table of Contents
 
@@ -39,6 +39,8 @@ Sent by the server to create an entity on the client, normally upon the entity s
 | `VAR_INT` | Data: Meaning dependent on the value of the Type field, see Object Data for details. |
 | `SHORT` | Velocity X: Same units as Set Entity Velocity. |
 
+---
+
 ### ADD_EXPERIENCE_ORB
 
 | Version Range | ID (hex) | ID (dec) |
@@ -47,12 +49,16 @@ Sent by the server to create an entity on the client, normally upon the entity s
 | 1.9 - 1.19.3 | 0x1 | 1 |
 | 1.19.4 - 1.21.2 | 0x2 | 2 |
 
+---
+
 ### ADD_GLOBAL_ENTITY
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.8 | 0x2C | 44 |
 | 1.9 - 1.15 | 0x2 | 2 |
+
+---
 
 ### ADD_MOB
 
@@ -62,6 +68,8 @@ Sent by the server to create an entity on the client, normally upon the entity s
 | 1.9 - 1.15 | 0x3 | 3 |
 | 1.16 - 1.18 | 0x2 | 2 |
 
+---
+
 ### ADD_PAINTING
 
 | Version Range | ID (hex) | ID (dec) |
@@ -69,6 +77,8 @@ Sent by the server to create an entity on the client, normally upon the entity s
 | 1.8 | 0x10 | 16 |
 | 1.9 - 1.15 | 0x4 | 4 |
 | 1.16 - 1.18 | 0x3 | 3 |
+
+---
 
 ### ADD_PLAYER
 
@@ -80,11 +90,15 @@ Sent by the server to create an entity on the client, normally upon the entity s
 | 1.19 - 1.19.3 | 0x2 | 2 |
 | 1.19.4 | 0x3 | 3 |
 
+---
+
 ### ADD_VIBRATION_SIGNAL
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.17 - 1.18 | 0x5 | 5 |
+
+---
 
 ### ANIMATE
 
@@ -109,6 +123,8 @@ Sent whenever an entity should change animation.
 | --- | --- |
 | `VAR_INT` | Entity ID: Player ID. |
 | `BYTE` | Animation: Animation ID (see below). |
+
+---
 
 ### AWARD_STATS
 
@@ -135,6 +151,8 @@ Sent as a response to Client Status (id 1). Will only send the changed values if
 | `VAR_INT` | Statistic ID: See below. |
 | `VAR_INT` | Value: The amount to set it to. |
 
+---
+
 ### BLOCK_BREAK_ACK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -143,6 +161,8 @@ Sent as a response to Client Status (id 1). Will only send the changed values if
 | 1.15 | 0x8 | 8 |
 | 1.16 - 1.16.2 | 0x7 | 7 |
 | 1.17 - 1.18 | 0x8 | 8 |
+
+---
 
 ### BLOCK_CHANGED_ACK
 
@@ -162,6 +182,8 @@ Acknowledges a user-initiated block change. After receiving this packet, the cli
 | Type | Description |
 | --- | --- |
 | `VAR_INT` | Sequence ID: Represents the sequence to acknowledge; this is used for properly syncing block changes to the client after interactions. |
+
+---
 
 ### BLOCK_DESTRUCTION
 
@@ -188,6 +210,8 @@ Acknowledges a user-initiated block change. After receiving this packet, the cli
 | `VAR_INT` | Entity ID: The ID of the entity breaking the block. |
 | `POSITION` | Location: Block Position. |
 | `BYTE` | Destroy Stage: 0–9 to set it, any other value to remove it. |
+
+---
 
 ### BLOCK_ENTITY_DATA
 
@@ -218,6 +242,8 @@ Sets the block entity associated with the block at the given location.
 | `VAR_INT` | Type: ID in the minecraft:block_entity_type registry |
 | `NBT` | NBT Data: Data to set. |
 
+---
+
 ### BLOCK_EVENT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -245,6 +271,8 @@ This packet is used for a number of actions and animations performed by blocks, 
 | `BYTE` | Action Parameter (Byte 2): Varies depending on block — see Block Actions. |
 | `VAR_INT` | Block Type: ID in the minecraft:block registry. This value is unused by the vanilla client, as it will infer the type of block based on the given position. |
 
+---
+
 ### BLOCK_UPDATE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -271,6 +299,8 @@ Fired whenever a block is changed within the render distance.
 | `VAR_INT` | Block ID: The new block state ID for the block as given in the block state registry. |
 | `POSITION` | Location: Block Coordinates. |
 | `VAR_INT` | Block ID: The new block state ID for the block as given in the block state registry. |
+
+---
 
 ### BOSS_EVENT
 
@@ -303,6 +333,8 @@ Fired whenever a block is changed within the render distance.
 | `VAR_INT` | Dividers: as above |
 | `BYTE` | Flags: as above |
 
+---
+
 ### BUNDLE_DELIMITER
 
 | Version Range | ID (hex) | ID (dec) |
@@ -319,6 +351,8 @@ The delimiter for a bundle of packets. When received, the client should store ev
 | --- | --- |
 | `CLIENT` | Play: no fields |
 | `CLIENT` | Play: no fields |
+
+---
 
 ### CHANGE_DIFFICULTY
 
@@ -347,6 +381,8 @@ Changes the difficulty setting in the client's option menu
 | `BYTE` | Difficulty: 0: peaceful, 1: easy, 2: normal, 3: hard. |
 | `BOOLEAN` | Difficulty locked? |
 
+---
+
 ### CHAT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -358,11 +394,15 @@ Changes the difficulty setting in the client's option menu
 | 1.16 - 1.16.2 | 0xE | 14 |
 | 1.17 - 1.18 | 0xF | 15 |
 
+---
+
 ### CHAT_PREVIEW
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.19 - 1.19.1 | 0xC | 12 |
+
+---
 
 ### CHUNKS_BIOMES
 
@@ -379,6 +419,8 @@ Changes the difficulty setting in the client's option menu
 | `CHUNK_Z` | Chunk biome data: Prefixed Array |
 | `INT` | Chunk X: Chunk coordinate (block coordinate divided by 16, rounded down) |
 | `BYTE` | Data: Chunk data structure, with sections containing only the Biomes field |
+
+---
 
 ### CHUNK_BATCH_FINISHED
 
@@ -398,6 +440,8 @@ Marks the end of a chunk batch. The vanilla client marks the time it receives th
 | `VAR_INT` | Batch size: Number of chunks. |
 | `VAR_INT` | Batch size: Number of chunks. |
 
+---
+
 ### CHUNK_BATCH_START
 
 | Version Range | ID (hex) | ID (dec) |
@@ -416,6 +460,8 @@ Marks the start of a chunk batch. The vanilla client marks and stores the time i
 | `CLIENT` | Play: no fields |
 | `CLIENT` | Play: no fields |
 
+---
+
 ### CHUNK_BLOCKS_UPDATE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -425,6 +471,8 @@ Marks the start of a chunk batch. The vanilla client marks and stores the time i
 | 1.13 - 1.14.4 | 0xF | 15 |
 | 1.15 | 0x10 | 16 |
 | 1.16 | 0xF | 15 |
+
+---
 
 ### CLEAR_DIALOG
 
@@ -443,6 +491,8 @@ If we're currently in a dialog screen, then this removes the current screen and 
 | --- | --- |
 | `CLIENT` | Configuration: no fields |
 | `CLIENT` | Play: no fields |
+
+---
 
 ### CLEAR_TITLES
 
@@ -465,6 +515,8 @@ Clear the client's current title information, with the option to also reset it.
 | --- | --- |
 | `BOOLEAN` | Reset |
 | `BOOLEAN` | Reset |
+
+---
 
 ### COMMANDS
 
@@ -493,6 +545,8 @@ Lists all of the commands on the server, and how they are parsed. This is a dire
 | `VAR_INT` | Root index: Index of the root node in the previous array. |
 | `ARRAY` | Nodes: An array of nodes. |
 | `VAR_INT` | Root index: Index of the root node in the previous array. |
+
+---
 
 ### COMMAND_SUGGESTIONS
 
@@ -525,6 +579,8 @@ The server responds with a list of auto-completions of the last word sent to it.
 | `STRING` | Prefixed Array: One eligible value to insert, note that each command is sent separately instead of in a single string, hence the need for Count. |
 | `PREFIXED_OPTIONAL_TEXT_COMPONENT` | Tooltip: Tooltip to display. |
 
+---
+
 ### CONTAINER_ACK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -535,6 +591,8 @@ The server responds with a list of auto-completions of the last word sent to it.
 | 1.15 | 0x13 | 19 |
 | 1.16 | 0x12 | 18 |
 | 1.16.2 | 0x11 | 17 |
+
+---
 
 ### CONTAINER_CLOSE
 
@@ -562,6 +620,8 @@ This packet is sent from the server to the client when a window is forcibly clos
 | Type | Description |
 | --- | --- |
 | `VAR_INT` | Window ID: This is the ID of the window that was closed. 0 for inventory. |
+
+---
 
 ### CONTAINER_SET_CONTENT
 
@@ -593,6 +653,8 @@ Replaces the contents of a container window. Sent by the server upon initializat
 | `VAR_INT` | State ID: A server-managed sequence number used to avoid desynchronization; see #Click Container. |
 | `SLOT` | Carried Item: Item being dragged with the mouse. |
 
+---
+
 ### CONTAINER_SET_DATA
 
 | Version Range | ID (hex) | ID (dec) |
@@ -622,6 +684,8 @@ This packet is used to inform the client that part of a GUI window should be upd
 | `VAR_INT` | Window ID |
 | `SHORT` | Property: The property to be updated, see below. |
 | `SHORT` | Value: The new value for the property, see below. |
+
+---
 
 ### CONTAINER_SET_SLOT
 
@@ -654,6 +718,8 @@ Sent by the server when an item in a slot (in a window) is added/removed.
 | `SHORT` | Slot: The slot that should be updated. |
 | `SLOT` | Slot Data |
 
+---
+
 ### COOKIE_REQUEST
 
 | Version Range | ID (hex) | ID (dec) |
@@ -672,6 +738,8 @@ Requests a cookie that was previously stored.
 | `STRING` | Key: The identifier of the cookie. |
 | `STRING` | Key: The identifier of the cookie. |
 | `STRING` | Key: The identifier of the cookie. |
+
+---
 
 ### COOLDOWN
 
@@ -702,6 +770,8 @@ Applies a cooldown period to all items with the given type.  Used by the vanilla
 | `STRING` | Cooldown Group: Identifier of the item (minecraft:stone) or the cooldown group ("use_cooldown" item component) |
 | `VAR_INT` | Cooldown Ticks: Number of ticks to apply a cooldown for, or 0 to clear the cooldown. |
 
+---
+
 ### CUSTOM_CHAT_COMPLETIONS
 
 | Version Range | ID (hex) | ID (dec) |
@@ -723,6 +793,8 @@ Unused by the vanilla server. Likely provided for custom servers to send chat me
 | --- | --- |
 | `VAR_INT` | Action: 0: Add, 1: Remove, 2: Set |
 | `STRING` | Entries |
+
+---
 
 ### CUSTOM_PAYLOAD
 
@@ -757,6 +829,8 @@ Mods and plugins can use this to send their data. Minecraft itself uses several 
 | `STRING` | Channel: Name of the plugin channel used to send the data. |
 | `BYTE` | Data: Any data. The length of this array must be inferred from the packet length. |
 
+---
+
 ### CUSTOM_REPORT_DETAILS
 
 | Version Range | ID (hex) | ID (dec) |
@@ -780,6 +854,8 @@ Contains a list of key-value text entries that are included in any crash or disc
 | `TITLE` | Details: Prefixed Array (32) |
 | `STRING` | Description |
 
+---
+
 ### CUSTOM_SOUND
 
 | Version Range | ID (hex) | ID (dec) |
@@ -794,6 +870,8 @@ Contains a list of key-value text entries that are included in any crash or disc
 | 1.17 - 1.18 | 0x19 | 25 |
 | 1.19 | 0x16 | 22 |
 | 1.19.1 | 0x17 | 23 |
+
+---
 
 ### DAMAGE_EVENT
 
@@ -825,11 +903,15 @@ and damage was dealt indirectly, such as by the use of a projectile, this field 
 and damage was dealt directly, such as by manually attacking, this field will contain the same value as Source Cause ID. |
 | `DOUBLE` | Prefixed Optional: The vanilla server sends the Source Position when the damage was dealt by the /damage command and a position was specified |
 
+---
+
 ### DEBUG_BLOCK_VALUE
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.21.9 | 0x1A | 26 |
+
+---
 
 ### DEBUG_CHUNK_VALUE
 
@@ -837,17 +919,23 @@ and damage was dealt directly, such as by manually attacking, this field will co
 | --- | --- | --- |
 | 1.21.9 | 0x1B | 27 |
 
+---
+
 ### DEBUG_ENTITY_VALUE
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.21.9 | 0x1C | 28 |
 
+---
+
 ### DEBUG_EVENT
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.21.9 | 0x1D | 29 |
+
+---
 
 ### DEBUG_SAMPLE
 
@@ -869,6 +957,8 @@ Sample data that is sent periodically after the client has subscribed with Debug
 | `VAR_INT` | Sample Type: See below. |
 | `LONG` | Sample: Array of type-dependent samples. |
 | `VAR_INT` | Sample Type: See below. |
+
+---
 
 ### DELETE_CHAT
 
@@ -892,6 +982,8 @@ Removes a message from the client's chat. This only works for messages with sign
 | --- | --- |
 | `VAR_INT` | Message ID: The message ID + 1, used for validating message signature. The next field is present only when value of this field is equal to 0. |
 | `BYTE` | Signature: The previous message's signature. Always 256 bytes and not length-prefixed. |
+
+---
 
 ### DISCONNECT
 
@@ -925,6 +1017,8 @@ Sent by the server before it disconnects a client. The client assumes that the s
 | `TEXT_COMPONENT` | Reason: The reason why the player was disconnected. |
 | `TEXT_COMPONENT` | Reason: Displayed to the client when the connection terminates. |
 
+---
+
 ### DISGUISED_CHAT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -950,6 +1044,8 @@ Sends the client a chat message, but without any message signing information. Th
 This is used as the sender parameter when formatting the message on the client. |
 | `PREFIXED_OPTIONAL_TEXT_COMPONENT` | Target Name: The name of the one receiving the message, usually the receiver's display name.
 This is used as the target parameter when formatting the message on the client. |
+
+---
 
 ### ENTITY_EVENT
 
@@ -985,6 +1081,8 @@ Entity statuses generally trigger an animation for an entity.  The available sta
 | `INT` | Entity ID |
 | `BYTE` | Entity Status: See Entity statuses for a list of which statuses are valid for each type of entity. |
 
+---
+
 ### ENTITY_POSITION_SYNC
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1011,6 +1109,8 @@ This packet is sent by the server when an entity moves more than 8 blocks.
 | `FLOAT` | Yaw: Rotation on the X axis, in degrees. |
 | `FLOAT` | Pitch: Rotation on the Y axis, in degrees. |
 | `BOOLEAN` | On Ground |
+
+---
 
 ### EXPLODE
 
@@ -1050,6 +1150,8 @@ Sent when an explosion occurs (creepers, TNT, and ghast fireballs).
 | `VARIES` | Explosion Particle Data: Particle data as specified in Particles. |
 | `ID_OR_SOUND_EVENT` | Explosion Sound: ID in the minecraft:sound_event registry, or an inline definition. |
 
+---
+
 ### FORGET_LEVEL_CHUNK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1081,6 +1183,8 @@ Tells the client to unload a chunk column.
 | --- | --- |
 | `INT` | Chunk Z: Block coordinate divided by 16, rounded down. |
 | `INT` | Chunk X: Block coordinate divided by 16, rounded down. |
+
+---
 
 ### GAME_EVENT
 
@@ -1117,11 +1221,15 @@ Used for a wide variety of game events, such as weather, respawn availability (f
 | `BYTE` | Event: See below. |
 | `FLOAT` | Value: Depends on Event. |
 
+---
+
 ### GAME_EVENT_TEST_HIGHLIGHT_POS
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.21.9 | 0x27 | 39 |
+
+---
 
 ### HORSE_SCREEN_OPEN
 
@@ -1154,6 +1262,8 @@ This packet is used exclusively for opening the horse GUI. Open Screen is used f
 | `VAR_INT` | Inventory columns count: How many columns of horse inventory slots exist in the GUI, 3 slots per column. |
 | `INT` | Entity ID: The "owner" entity of the GUI. The client should close the GUI if the owner entity dies or is cleared. |
 
+---
+
 ### HURT_ANIMATION
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1177,6 +1287,8 @@ Plays a bobbing animation for the entity receiving damage.
 | `FLOAT` | Yaw: The direction the damage is coming from in relation to the entity |
 | `VAR_INT` | Entity ID: The ID of the entity taking damage |
 | `FLOAT` | Yaw: The direction the damage is coming from in relation to the entity |
+
+---
 
 ### INITIALIZE_BORDER
 
@@ -1205,6 +1317,8 @@ Plays a bobbing animation for the entity receiving damage.
 | `VAR_INT` | Portal Teleport Boundary: Resulting coordinates from a portal teleport are limited to ±value. Usually 29999984. |
 | `VAR_INT` | Warning Blocks: In meters. |
 | `VAR_INT` | Warning Time: In seconds as set by /worldborder warning time. |
+
+---
 
 ### KEEP_ALIVE
 
@@ -1239,6 +1353,8 @@ The server will frequently send out a keep-alive, each containing a random ID. T
 | `LONG` | Keep Alive ID |
 | `LONG` | Keep Alive ID |
 
+---
+
 ### LEVEL_CHUNK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1251,6 +1367,8 @@ The server will frequently send out a keep-alive, each containing a random ID. T
 | 1.16 | 0x21 | 33 |
 | 1.16.2 | 0x20 | 32 |
 | 1.17 - 1.17.1 | 0x22 | 34 |
+
+---
 
 ### LEVEL_CHUNK_WITH_LIGHT
 
@@ -1279,6 +1397,8 @@ Sent when a chunk comes into the client's view distance, specifying its terrain,
 | `INT` | Chunk Z: Chunk coordinate (block coordinate divided by 16, rounded down) |
 | `CHUNK_DATA` | Data |
 | `LIGHT_DATA` | Light |
+
+---
 
 ### LEVEL_EVENT
 
@@ -1314,6 +1434,8 @@ Sent when a client is to play a sound or particle effect. By default, the Minecr
 | `POSITION` | Location: The location of the event. |
 | `INT` | Data: Extra data for certain events, see below. |
 | `BOOLEAN` | Disable Relative Volume: See above. |
+
+---
 
 ### LEVEL_PARTICLES
 
@@ -1358,6 +1480,8 @@ Displays the named particle
 | `VAR_INT` | Particle ID: ID in the minecraft:particle_type registry. |
 | `VARIES` | Data: Particle data as specified in Particles. |
 
+---
+
 ### LIGHT_UPDATE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1388,6 +1512,8 @@ Updates light levels for a chunk.  See Light for information on how lighting wor
 | `VAR_INT` | Chunk X: Chunk coordinate (block coordinate divided by 16, rounded down) |
 | `VAR_INT` | Chunk Z: Chunk coordinate (block coordinate divided by 16, rounded down) |
 | `LIGHT_DATA` | Data |
+
+---
 
 ### LOGIN
 
@@ -1441,11 +1567,15 @@ See protocol encryption for information on logging in.
 | `VAR_INT` | Sea level |
 | `BOOLEAN` | Enforces Secure Chat |
 
+---
+
 ### MAP_BULK_CHUNK
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.8 | 0x26 | 38 |
+
+---
 
 ### MAP_ITEM_DATA
 
@@ -1489,6 +1619,8 @@ Updates a rectangular area on a map item.
 | `BYTE` | X: Only if Columns is more than 0; x offset of the westernmost column |
 | `BYTE` | Z: Only if Columns is more than 0; z offset of the northernmost row |
 | `BYTE` | Data: Only if Columns is more than 0; see Map item format |
+
+---
 
 ### MERCHANT_OFFERS
 
@@ -1554,6 +1686,8 @@ The list of trades a villager NPC is offering. 1: Novice, 2: Apprentice, 3: Jour
 | `COMPONENT_TYPE` | Components: Prefixed Array |
 | `VARIES` | Component data: The component-dependent data. See Structured components for more detail. |
 
+---
+
 ### MOVE_ENTITY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1566,6 +1700,8 @@ The list of trades a villager NPC is offering. 1: Novice, 2: Apprentice, 3: Jour
 | 1.15 | 0x2C | 44 |
 | 1.16 | 0x2B | 43 |
 | 1.16.2 | 0x2A | 42 |
+
+---
 
 ### MOVE_ENTITY_POS
 
@@ -1602,6 +1738,8 @@ This packet is sent by the server when an entity moves a small distance. The cha
 | `SHORT` | Delta Y: Change in Y position as currentY * 4096 - prevY * 4096. |
 | `SHORT` | Delta Z: Change in Z position as currentZ * 4096 - prevZ * 4096. |
 | `BOOLEAN` | On Ground |
+
+---
 
 ### MOVE_ENTITY_POS_ROT
 
@@ -1641,6 +1779,8 @@ This packet is sent by the server when an entity rotates and moves. See #Update 
 | `BYTE` | Pitch: New angle, not a delta. |
 | `BOOLEAN` | On Ground |
 
+---
+
 ### MOVE_ENTITY_ROT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1676,6 +1816,8 @@ This packet is sent by the server when an entity rotates.
 | `BYTE` | Pitch: New angle, not a delta. |
 | `BOOLEAN` | On Ground |
 
+---
+
 ### MOVE_MINECART_ALONG_TRACK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1706,6 +1848,8 @@ This packet is sent by the server when an entity rotates.
 | `DOUBLE` | Velocity Z |
 | `BYTE` | Yaw |
 | `BYTE` | Pitch |
+
+---
 
 ### MOVE_VEHICLE
 
@@ -1742,6 +1886,8 @@ If the player is riding a client-side-controlled vehicle, teleports the vehicle 
 | `FLOAT` | Yaw: Absolute rotation on the vertical axis, in degrees. |
 | `FLOAT` | Pitch: Absolute rotation on the horizontal axis, in degrees. |
 
+---
+
 ### OPEN_BOOK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1771,6 +1917,8 @@ Sent when a player right-clicks with a signed book. This tells the client to ope
 | --- | --- |
 | `VAR_INT` | Hand: 0: Main hand, 1: Off hand . |
 | `VAR_INT` | Hand: 0: Main hand, 1: Off hand . |
+
+---
 
 ### OPEN_SCREEN
 
@@ -1809,6 +1957,8 @@ This is sent to the client when it should open an inventory, such as a chest, wo
 | `VAR_INT` | Window Type: The window type to use for display. Contained in the minecraft:menu registry; see Inventory for the different values. |
 | `TEXT_COMPONENT` | Window Title: The title of the window. |
 
+---
+
 ### OPEN_SIGN_EDITOR
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1844,6 +1994,8 @@ Sent when the client has placed a sign and is allowed to send Update Sign.  Ther
 | `POSITION` | Location |
 | `BOOLEAN` | Is Front Text: Whether the opened editor is for the front or on the back of the sign |
 
+---
+
 ### PING
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1869,6 +2021,8 @@ Packet is not used by the vanilla server. When sent to the client, the client re
 | --- | --- |
 | `INT` | ID |
 | `INT` | ID |
+
+---
 
 ### PLACE_GHOST_RECIPE
 
@@ -1904,6 +2058,8 @@ Response to the serverbound packet (Place Recipe), with the same recipe ID. Appe
 | `VAR_INT` | Window ID |
 | `RECIPE_DISPLAY` | Recipe Display |
 
+---
+
 ### PLAYER_ABILITIES
 
 | Version Range | ID (hex) | ID (dec) |
@@ -1938,6 +2094,8 @@ The latter 2 floats are used to indicate the flying speed and field of view resp
 | `BYTE` | Flags: Bit field, see below. |
 | `FLOAT` | Flying Speed: 0.05 by default. |
 | `FLOAT` | Field of View Modifier: Modifies the field of view, like a speed potion. A vanilla server will use the same value as the movement speed sent in the Update Attributes packet, which defaults to 0.1 for players. |
+
+---
 
 ### PLAYER_CHAT
 
@@ -1980,11 +2138,15 @@ This is used as the sender parameter when formatting the message on the client. 
 | `PREFIXED_OPTIONAL_TEXT_COMPONENT` | Target Name: The name of the one receiving the message, usually the receiver's display name.
 This is used as the target parameter when formatting the message on the client. |
 
+---
+
 ### PLAYER_CHAT_HEADER
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.19.1 | 0x32 | 50 |
+
+---
 
 ### PLAYER_COMBAT
 
@@ -1998,6 +2160,8 @@ This is used as the target parameter when formatting the message on the client. 
 | 1.15 | 0x33 | 51 |
 | 1.16 | 0x32 | 50 |
 | 1.16.2 | 0x31 | 49 |
+
+---
 
 ### PLAYER_COMBAT_END
 
@@ -2024,6 +2188,8 @@ Unused by the vanilla client.  This data was once used for twitch.tv metadata ci
 | --- | --- |
 | `VAR_INT` | Duration: Length of the combat in ticks. |
 
+---
+
 ### PLAYER_COMBAT_ENTER
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2048,6 +2214,8 @@ Unused by the vanilla client.  This data was once used for twitch.tv metadata ci
 | Type | Description |
 | --- | --- |
 | `CLIENT` | Play: no fields |
+
+---
 
 ### PLAYER_COMBAT_KILL
 
@@ -2075,6 +2243,8 @@ Used to send a respawn screen.
 | `VAR_INT` | Player ID: Entity ID of the player that died (should match the client's entity ID). |
 | `TEXT_COMPONENT` | Message: The death message. |
 
+---
+
 ### PLAYER_INFO
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2090,6 +2260,8 @@ Used to send a respawn screen.
 | 1.17 - 1.18 | 0x36 | 54 |
 | 1.19 | 0x34 | 52 |
 | 1.19.1 | 0x37 | 55 |
+
+---
 
 ### PLAYER_INFO_REMOVE
 
@@ -2113,6 +2285,8 @@ Used by the server to remove players from the player list.
 | --- | --- |
 | `UUID` | UUIDs: UUIDs of players to remove. |
 | `UUID` | UUIDs: UUIDs of players to remove. |
+
+---
 
 ### PLAYER_INFO_UPDATE
 
@@ -2147,6 +2321,8 @@ Sent by the server to update the user list ( in the client).
 | `BYTE` | Encoded public key: The player's public key, in bytes. Only sent if Has Signature Data is true. |
 | `BYTE` | Public key signature: The public key's digital signature. Only sent if Has Signature Data is true. |
 | `GAME_MODE` | 0x04: VarInt |
+
+---
 
 ### PLAYER_LOOK_AT
 
@@ -2184,6 +2360,8 @@ Used to rotate the client player to face the given location or entity (for /tele
 | `BOOLEAN` | Is entity: If true, additional information about an entity is provided. |
 | `VAR_INT` | Entity ID: Only if is entity is true — the entity to face towards. |
 | `VAR_INT` | Entity feet/eyes: Whether to look at the entity's eyes or feet.  Same values and meanings as before, just for the entity's head/feet. |
+
+---
 
 ### PLAYER_POSITION
 
@@ -2227,6 +2405,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | `FLOAT` | Pitch: Absolute or relative rotation on the Y axis, in degrees. |
 | `TELEPORT_FLAGS` | Flags |
 
+---
+
 ### PLAYER_ROTATION
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2244,6 +2424,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | `FLOAT` | Yaw: Rotation on the X axis, in degrees. |
 | `FLOAT` | Pitch: Rotation on the Y axis, in degrees. |
 
+---
+
 ### PLAYER_SLEEP
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2252,6 +2434,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | 1.9 - 1.12 | 0x2F | 47 |
 | 1.12.1 | 0x30 | 48 |
 | 1.13 | 0x33 | 51 |
+
+---
 
 ### PONG_RESPONSE
 
@@ -2270,6 +2454,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | `LONG` | Timestamp: Should match the one sent by the client. |
 | `LONG` | Payload: Should be the same as sent by the client. |
 
+---
+
 ### PROJECTILE_POWER
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2286,6 +2472,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | `DOUBLE` | Power |
 | `VAR_INT` | Entity ID |
 | `DOUBLE` | Power |
+
+---
 
 ### RECIPE
 
@@ -2305,6 +2493,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | 1.19.4 | 0x3D | 61 |
 | 1.20.2 - 1.20.3 | 0x3F | 63 |
 | 1.20.5 - 1.21 | 0x41 | 65 |
+
+---
 
 ### RECIPE_BOOK_ADD
 
@@ -2333,6 +2523,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | `BYTE` | Flags: 0x01: show notification; 0x02: highlight as new |
 | `BOOLEAN` | Replace: Replace or Add to known recipes |
 
+---
+
 ### RECIPE_BOOK_REMOVE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2347,6 +2539,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | --- | --- |
 | `VAR_INT` | Recipes: IDs of recipes to remove. |
 | `VAR_INT` | Recipes: IDs of recipes to remove. |
+
+---
 
 ### RECIPE_BOOK_SETTINGS
 
@@ -2376,6 +2570,8 @@ Teleports the client, e.g., during login, when using an ender pearl, in response
 | `BOOLEAN` | Blast Furnace Recipe Book Filter Active: If true, then the filtering option is active when the player opens its inventory. |
 | `BOOLEAN` | Smoker Recipe Book Open: If true, then the smoker recipe book will be open when the player opens its inventory. |
 | `BOOLEAN` | Smoker Recipe Book Filter Active: If true, then the filtering option is active when the player opens its inventory. |
+
+---
 
 ### REMOVE_ENTITIES
 
@@ -2412,11 +2608,15 @@ Sent by the server when an entity is to be destroyed on the client.
 | `VAR_INT` | Entity IDs: The list of entities to destroy. |
 | `VAR_INT` | Entity IDs: The list of entities to destroy. |
 
+---
+
 ### REMOVE_ENTITY
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.17 | 0x3A | 58 |
+
+---
 
 ### REMOVE_MOB_EFFECT
 
@@ -2449,6 +2649,8 @@ Sent by the server when an entity is to be destroyed on the client.
 | `VAR_INT` | Entity ID |
 | `VAR_INT` | Effect ID: See this table. |
 
+---
+
 ### RESET_SCORE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2472,6 +2674,8 @@ This is sent to the client when it should remove a scoreboard item.
 | `STRING` | Entity Name: The entity whose score this is. For players, this is their username; for other entities, it is their UUID. |
 | `STRING` | Objective Name: The name of the objective the score belongs to. |
 
+---
+
 ### RESOURCE_PACK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2492,6 +2696,8 @@ This is sent to the client when it should remove a scoreboard item.
 | 1.19.4 | 0x40 | 64 |
 | 1.20.2 | 0x42 | 66 |
 
+---
+
 ### RESOURCE_PACK_POP
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2508,6 +2714,8 @@ This is sent to the client when it should remove a scoreboard item.
 | --- | --- |
 | `UUID` | UUID: The UUID of the resource pack to be removed. If not present, every resource pack will be removed. |
 | `UUID` | UUID: The UUID of the resource pack to be removed. |
+
+---
 
 ### RESOURCE_PACK_PUSH
 
@@ -2533,6 +2741,8 @@ This is sent to the client when it should remove a scoreboard item.
 | `STRING` | Hash: A 40 character hexadecimal, case-insensitive SHA-1 hash of the resource pack file.If it's not a 40-character hexadecimal string, the client will not use it for hash verification and likely waste bandwidth. |
 | `BOOLEAN` | Forced: The vanilla client will be forced to use the resource pack from the server. If they decline, they will be kicked from the server. |
 | `PREFIXED_OPTIONAL_TEXT_COMPONENT` | Prompt Message: This is shown in the prompt making the client accept or decline the resource pack. |
+
+---
 
 ### RESPAWN
 
@@ -2604,6 +2814,8 @@ normal respawns (after death) keep no data;
 exiting the end poem/credits keeps the attributes;
 other dimension changes (portals or teleports) keep all data. |
 
+---
+
 ### ROTATE_HEAD
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2640,6 +2852,8 @@ Changes the direction an entity's head is facing. While sending the Entity Look 
 | `VAR_INT` | Entity ID |
 | `BYTE` | Head Yaw: New angle, not a delta. |
 
+---
+
 ### SECTION_BLOCKS_UPDATE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2667,6 +2881,8 @@ Fired whenever 2 or more blocks are changed within the same chunk on the same ti
 | --- | --- |
 | `LONG` | Chunk section position: Chunk section coordinate (encoded chunk x and z with each 22 bits, and section y with 20 bits, from left to right). |
 | `VAR_LONG` | Blocks: Each entry is composed of the block state id, shifted left by 12, and the relative block position in the chunk section (4 bits for x, z, and y, from left to right). |
+
+---
 
 ### SELECT_ADVANCEMENTS_TAB
 
@@ -2701,6 +2917,8 @@ Sent by the server to indicate that the client should switch advancement tab. Se
 | `STRING` | Identifier: See below. |
 | `STRING` | Identifier: See below. |
 
+---
+
 ### SERVER_DATA
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2724,6 +2942,8 @@ Sent by the server to indicate that the client should switch advancement tab. Se
 | `BYTE` | Icon: Icon bytes in the PNG format. |
 | `TEXT_COMPONENT` | MOTD |
 | `BYTE` | Icon: Icon bytes in the PNG format. |
+
+---
 
 ### SERVER_LINKS
 
@@ -2749,6 +2969,8 @@ This packet contains a list of links that the vanilla client will display in the
 | `IS_BUILTIN` | Links: Prefixed Array |
 | `VAR_INT` | Label: See below. |
 | `STRING` | URL: Valid URL. |
+
+---
 
 ### SET_ACTION_BAR_TEXT
 
@@ -2777,6 +2999,8 @@ Displays a message above the hotbar. Equivalent to System Chat Message with Over
 | `ACTION_BAR_TEXT` | Client: Text Component |
 | `ACTION_BAR_TEXT` | Client: Text Component |
 
+---
+
 ### SET_BORDER
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2789,6 +3013,8 @@ Displays a message above the hotbar. Equivalent to System Chat Message with Over
 | 1.14 - 1.14.4 | 0x3D | 61 |
 | 1.15 | 0x3E | 62 |
 | 1.16 - 1.16.2 | 0x3D | 61 |
+
+---
 
 ### SET_BORDER_CENTER
 
@@ -2814,6 +3040,8 @@ Displays a message above the hotbar. Equivalent to System Chat Message with Over
 | `DOUBLE` | Z |
 | `DOUBLE` | X |
 | `DOUBLE` | Z |
+
+---
 
 ### SET_BORDER_LERP_SIZE
 
@@ -2842,6 +3070,8 @@ Displays a message above the hotbar. Equivalent to System Chat Message with Over
 | `DOUBLE` | New Diameter: Target length of a single side of the world border, in meters. |
 | `VAR_LONG` | Speed: Number of real-time milliseconds until New Diameter is reached. It appears that vanilla server does not sync world border speed to game ticks, so it gets out of sync with server lag. If the world border is not moving, this is set to 0. |
 
+---
+
 ### SET_BORDER_SIZE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2864,6 +3094,8 @@ Displays a message above the hotbar. Equivalent to System Chat Message with Over
 | --- | --- |
 | `DOUBLE` | Diameter: Length of a single side of the world border, in meters. |
 | `DOUBLE` | Diameter: Length of a single side of the world border, in meters. |
+
+---
 
 ### SET_BORDER_WARNING_DELAY
 
@@ -2888,6 +3120,8 @@ Displays a message above the hotbar. Equivalent to System Chat Message with Over
 | `VAR_INT` | Warning Time: In seconds as set by /worldborder warning time. |
 | `VAR_INT` | Warning Time: In seconds as set by /worldborder warning time. |
 
+---
+
 ### SET_BORDER_WARNING_DISTANCE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2910,6 +3144,8 @@ Displays a message above the hotbar. Equivalent to System Chat Message with Over
 | --- | --- |
 | `VAR_INT` | Warning Blocks: In meters. |
 | `VAR_INT` | Warning Blocks: In meters. |
+
+---
 
 ### SET_CAMERA
 
@@ -2946,6 +3182,8 @@ Sets the entity that the player renders from. This is normally used when the pla
 | `VAR_INT` | Camera ID: ID of the entity to set the client's camera to. |
 | `VAR_INT` | Camera ID: ID of the entity to set the client's camera to. |
 
+---
+
 ### SET_CARRIED_ITEM
 
 | Version Range | ID (hex) | ID (dec) |
@@ -2966,6 +3204,8 @@ Sets the entity that the player renders from. This is normally used when the pla
 | 1.20.2 | 0x4F | 79 |
 | 1.20.3 | 0x51 | 81 |
 | 1.20.5 - 1.21 | 0x53 | 83 |
+
+---
 
 ### SET_CHUNK_CACHE_CENTER
 
@@ -2997,6 +3237,8 @@ Sets the center position of the client's chunk loading area. The area is square-
 | `VAR_INT` | Chunk X: Chunk X coordinate of the loading area center. |
 | `VAR_INT` | Chunk Z: Chunk Z coordinate of the loading area center. |
 
+---
+
 ### SET_CHUNK_CACHE_RADIUS
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3026,6 +3268,8 @@ Sent by the integrated singleplayer server when changing render distance.  This 
 | --- | --- |
 | `VAR_INT` | View Distance: Render distance (2-32). |
 
+---
+
 ### SET_COMPRESSION
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3041,6 +3285,8 @@ Enables compression.  If compression is enabled, all following packets are encod
 | Type | Description |
 | --- | --- |
 | `VAR_INT` | Threshold: Maximum size of a packet before it is compressed. |
+
+---
 
 ### SET_CURSOR_ITEM
 
@@ -3060,6 +3306,8 @@ Replaces or sets the inventory item that's being dragged with the mouse.
 | --- | --- |
 | `SLOT` | Carried item |
 | `SLOT` | Carried item |
+
+---
 
 ### SET_DEFAULT_SPAWN_POSITION
 
@@ -3098,12 +3346,16 @@ Sent by the server after login to specify the coordinates of the spawn point (th
 | `POSITION` | Location: Spawn location. |
 | `FLOAT` | Angle: The angle at which to respawn. |
 
+---
+
 ### SET_DISPLAY_CHAT_PREVIEW
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.19 | 0x4B | 75 |
 | 1.19.1 | 0x4E | 78 |
+
+---
 
 ### SET_DISPLAY_OBJECTIVE
 
@@ -3138,6 +3390,8 @@ This is sent to the client when it should display a scoreboard.
 | `VAR_INT` | Position: The position of the scoreboard. 0: list, 1: sidebar, 2: below name, 3 - 18: team-specific sidebar, indexed as 3 + team color. |
 | `STRING` | Score Name: The unique name for the scoreboard to be displayed. |
 
+---
+
 ### SET_ENTITY_DATA
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3171,6 +3425,8 @@ Updates one or more metadata properties for an existing entity. Any properties n
 | `VAR_INT` | Entity ID |
 | `ENTITY_METADATA` | Metadata |
 
+---
+
 ### SET_ENTITY_LINK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3203,6 +3459,8 @@ This packet is sent when an entity has been leashed to another entity.
 | --- | --- |
 | `INT` | Attached Entity ID: Attached entity's EID. |
 | `INT` | Holding Entity ID: ID of the entity holding the lead. Set to -1 to detach. |
+
+---
 
 ### SET_ENTITY_MOTION
 
@@ -3239,6 +3497,8 @@ Velocity is in units of 1/8000 of a block per server tick (50ms); for example, -
 | `SHORT` | Velocity Y: Velocity on the Y axis. |
 | `SHORT` | Velocity Z: Velocity on the Z axis. |
 
+---
+
 ### SET_EQUIPMENT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3270,6 +3530,8 @@ Equipment slot can be one of the following:
 | `THE_LENGTH_OF_THE_ARRAY_IS_NOT_KNOWN_BEFOREHAND_AND_HAS_TO_BE_DETERMINED_BY_READING_ALL_ENTRIES_AS_THE_MOST_SIGNIFICANT_BIT_OF_THE_SLOT_INDICATES_IF_THERE_IS_A_NEXT_ENTRY` | Byte Enum: Equipment slot (see below).  Also has the top bit set if another entry follows, and otherwise unset if this is the last item in the array. |
 | `SLOT` | Item |
 
+---
+
 ### SET_EQUIPPED_ITEM
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3281,6 +3543,8 @@ Equipment slot can be one of the following:
 | 1.13 | 0x42 | 66 |
 | 1.14 - 1.14.4 | 0x46 | 70 |
 | 1.15 | 0x47 | 71 |
+
+---
 
 ### SET_EXPERIENCE
 
@@ -3319,6 +3583,8 @@ Sent by the server when the client should change experience levels.
 | `VAR_INT` | Level |
 | `VAR_INT` | Total Experience: See Experience#Leveling up on the Minecraft Wiki for Total Experience to Level conversion. |
 
+---
+
 ### SET_HEALTH
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3356,6 +3622,8 @@ Sent by the server to set the health of the player it is sent to. Food saturatio
 | `VAR_INT` | Food: 0–20. |
 | `FLOAT` | Food Saturation: Seems to vary from 0.0 to 5.0 in integer increments. |
 
+---
+
 ### SET_HELD_SLOT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3373,6 +3641,8 @@ Sent to change the player's slot selection.
 | Type | Description |
 | --- | --- |
 | `VAR_INT` | Slot: The slot which the player has selected (0–8). |
+
+---
 
 ### SET_OBJECTIVE
 
@@ -3414,6 +3684,8 @@ This is sent to the client when it should create a new scoreboard objective or r
 | `COMPOUND_TAG` | Styling: The styling to be used when formatting the score number. Contains the text component styling fields. |
 | `TEXT_COMPONENT` | Content: The text to be used as placeholder. |
 
+---
+
 ### SET_PASSENGERS
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3444,6 +3716,8 @@ This is sent to the client when it should create a new scoreboard objective or r
 | `VAR_INT` | Entity ID: Vehicle's EID. |
 | `VAR_INT` | Passengers: EIDs of entity's passengers. |
 
+---
+
 ### SET_PLAYER_INVENTORY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3458,6 +3732,8 @@ This is sent to the client when it should create a new scoreboard objective or r
 | --- | --- |
 | `VAR_INT` | Slot |
 | `SLOT` | Slot Data |
+
+---
 
 ### SET_PLAYER_TEAM
 
@@ -3510,6 +3786,8 @@ Creates and updates teams.
 | `STRING` | Entities: Identifiers for the added entities.  For players, this is their username; for other entities, it is their UUID. |
 | `STRING` | Entities: Identifiers for the removed entities.  For players, this is their username; for other entities, it is their UUID. |
 
+---
+
 ### SET_SCORE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3549,6 +3827,8 @@ This is sent to the client when it should update a scoreboard item.
 | `COMPOUND_TAG` | Styling: The styling to be used when formatting the score number. Contains the text component styling fields. |
 | `TEXT_COMPONENT` | Content: The text to be used as placeholder. |
 
+---
+
 ### SET_SIMULATION_DISTANCE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3570,6 +3850,8 @@ This is sent to the client when it should update a scoreboard item.
 | --- | --- |
 | `VAR_INT` | Simulation Distance: The distance that the client will process specific things, such as entities. |
 | `VAR_INT` | Simulation Distance: The distance that the client will process specific things, such as entities. |
+
+---
 
 ### SET_SUBTITLE_TEXT
 
@@ -3593,6 +3875,8 @@ This is sent to the client when it should update a scoreboard item.
 | --- | --- |
 | `TEXT_COMPONENT` | Subtitle Text |
 | `TEXT_COMPONENT` | Subtitle Text |
+
+---
 
 ### SET_TIME
 
@@ -3630,6 +3914,8 @@ Time is based on ticks, where 20 ticks happen every second. There are 24000 tick
 | `LONG` | Time of day: The world (or region) time, in ticks. |
 | `BOOLEAN` | Time of day increasing: If true, the client should automatically advance the time of day according to its ticking rate. |
 
+---
+
 ### SET_TITLES
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3641,6 +3927,8 @@ Time is based on ticks, where 20 ticks happen every second. There are 24000 tick
 | 1.14 - 1.14.4 | 0x4F | 79 |
 | 1.15 | 0x50 | 80 |
 | 1.16 - 1.16.2 | 0x4F | 79 |
+
+---
 
 ### SET_TITLES_ANIMATION
 
@@ -3666,6 +3954,8 @@ Time is based on ticks, where 20 ticks happen every second. There are 24000 tick
 | `INT` | Stay: Ticks to keep the title displayed. |
 | `INT` | Fade Out: Ticks to spend fading out, not when to start fading out. |
 
+---
+
 ### SET_TITLE_TEXT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3689,6 +3979,8 @@ Time is based on ticks, where 20 ticks happen every second. There are 24000 tick
 | `TEXT_COMPONENT` | Title Text |
 | `TEXT_COMPONENT` | Title Text |
 
+---
+
 ### SHOW_DIALOG
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3706,6 +3998,8 @@ Show a custom dialog screen to the client.
 | --- | --- |
 | `NBT` | Dialog: Inline definition as described at Registry_data#Dialog. |
 | `ID_OR_NBT` | Dialog: ID in the minecraft:dialog registry, or an inline definition as described at Registry_data#Dialog. |
+
+---
 
 ### SOUND
 
@@ -3748,6 +4042,8 @@ Plays a sound effect at the given location, either by hardcoded ID or Identifier
 | `FLOAT` | Pitch: Float between 0.5 and 2.0 by vanilla clients. |
 | `LONG` | Seed: Seed used to pick sound variant. |
 
+---
+
 ### SOUND_ENTITY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3782,6 +4078,8 @@ Plays a sound effect from an entity, either by hardcoded ID or Identifier. Sound
 | `FLOAT` | Pitch: Float between 0.5 and 2.0 by vanilla clients. |
 | `LONG` | Seed: Seed used to pick sound variant. |
 
+---
+
 ### START_CONFIGURATION
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3803,6 +4101,8 @@ Sent during gameplay in order to redo the configuration process. The client must
 | --- | --- |
 | `CLIENT` | Play: no fields |
 | `CLIENT` | Play: no fields |
+
+---
 
 ### STOP_SOUND
 
@@ -3839,6 +4139,8 @@ Categories:
 | `VAR_INT` | Source: Only if flags is 3 or 1 (bit mask 0x1). See below. If not present, then sounds from all sources are cleared. |
 | `STRING` | Sound: Only if flags is 2 or 3 (bit mask 0x2).  A sound effect name, see Custom Sound Effect. If not present, then all sounds are cleared. |
 
+---
+
 ### STORE_COOKIE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3860,6 +4162,8 @@ Stores some arbitrary data on the client, which persists between server transfer
 | `BYTE` | Payload: The data of the cookie. |
 | `STRING` | Key: The identifier of the cookie. |
 | `BYTE` | Payload: The data of the cookie. |
+
+---
 
 ### SYSTEM_CHAT
 
@@ -3886,6 +4190,8 @@ Sends the client a raw system message.
 | --- | --- |
 | `TEXT_COMPONENT` | Content: Limited to 262144 bytes. |
 | `BOOLEAN` | Overlay: Whether the message is an actionbar or chat message. See also #Set Action Bar Text. |
+
+---
 
 ### TAB_LIST
 
@@ -3924,6 +4230,8 @@ This packet may be used by custom servers to display additional information abov
 | `TEXT_COMPONENT` | Header: To remove the header, send an empty text component: {"text":""}. |
 | `TEXT_COMPONENT` | Footer: To remove the footer, send an empty text component: {"text":""}. |
 
+---
+
 ### TAG_QUERY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -3955,6 +4263,8 @@ Sent in response to Query Block Entity Tag or Query Entity Tag.
 | --- | --- |
 | `VAR_INT` | Transaction ID: Can be compared to the one sent in the original query packet. |
 | `NBT` | NBT: The NBT of the block or entity. May be a TAG_END (0), in which case no NBT is present. |
+
+---
 
 ### TAKE_ITEM_ENTITY
 
@@ -3993,6 +4303,8 @@ Sent by the server when someone picks up an item lying on the ground — its sol
 | `VAR_INT` | Collected Entity ID |
 | `VAR_INT` | Collector Entity ID |
 | `VAR_INT` | Pickup Item Count: Seems to be 1 for XP orbs, otherwise the number of items in the stack. |
+
+---
 
 ### TELEPORT_ENTITY
 
@@ -4050,6 +4362,8 @@ This packet is sent by the server when an entity moves more than 8 blocks.
 | `TELEPORT_FLAGS` | Flags |
 | `BOOLEAN` | On Ground |
 
+---
+
 ### TEST_INSTANCE_BLOCK_STATUS
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4076,6 +4390,8 @@ Updates the status of the currently open Test Instance Block screen, if any.
 | `DOUBLE` | Size Y: Only present if Has Size is true. |
 | `DOUBLE` | Size Z: Only present if Has Size is true. |
 
+---
+
 ### TICKING_STATE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4096,6 +4412,8 @@ Used to adjust the ticking rate of the client, and whether it's frozen.
 | `FLOAT` | Tick rate |
 | `BOOLEAN` | Is frozen |
 
+---
+
 ### TICKING_STEP
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4115,12 +4433,16 @@ Advances the client processing by the specified number of ticks. Has no effect u
 | --- | --- |
 | `VAR_INT` | Tick steps |
 
+---
+
 ### TRACKED_WAYPOINT
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.21.6 | 0x83 | 131 |
 | 1.21.9 | 0x88 | 136 |
+
+---
 
 ### TRANSFER
 
@@ -4142,6 +4464,8 @@ Notifies the client that it should transfer to the given server. Cookies previou
 | `VAR_INT` | Port: The port of the server. |
 | `STRING` | Host: The hostname or IP of the server. |
 | `VAR_INT` | Port: The port of the server. |
+
+---
 
 ### UPDATE_ADVANCEMENTS
 
@@ -4203,6 +4527,8 @@ The vanilla client only sends data for advancements on the minecraft namespace. 
 | `STRING` | Criteria: Prefixed Array |
 | `LONG` | Date of achieving: Present if achieved. As returned by Date.getTime. |
 
+---
+
 ### UPDATE_ATTRIBUTES
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4248,6 +4574,8 @@ Sets attributes on the given entity.
 | `DOUBLE` | Amount: May be positive or negative. |
 | `BYTE` | Operation: See below. |
 
+---
+
 ### UPDATE_ENABLED_FEATURES
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4265,11 +4593,15 @@ Used to enable and disable features, generally experimental ones, on the client.
 | --- | --- |
 | `STRING` | Feature Flags |
 
+---
+
 ### UPDATE_ENTITY_NBT
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.8 | 0x49 | 73 |
+
+---
 
 ### UPDATE_MOB_EFFECT
 
@@ -4306,6 +4638,8 @@ Used to enable and disable features, generally experimental ones, on the client.
 | `VAR_INT` | Duration: Duration in ticks. (-1 for infinite) |
 | `BYTE` | Flags: Bit field, see below. |
 
+---
+
 ### UPDATE_RECIPES
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4339,12 +4673,16 @@ Used to enable and disable features, generally experimental ones, on the client.
 | `ID_SET` | Prefixed Array |
 | `SLOT_DISPLAY` | Slot Display |
 
+---
+
 ### UPDATE_SIGN
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.8 | 0x33 | 51 |
 | 1.9 | 0x46 | 70 |
+
+---
 
 ### UPDATE_TAGS
 
@@ -4373,7 +4711,6 @@ Used to enable and disable features, generally experimental ones, on the client.
 | `REGISTRY` | Array of tags: Prefixed Array |
 | `REGISTRY` | Registry to tags map: Prefixed Array |
 | `ARRAY` | Tags |
-
 ## Serverbound
 
 *Total packets:* 71
@@ -4394,6 +4731,8 @@ Sent by client as confirmation of Synchronize Player Position.
 | --- | --- |
 | `VAR_INT` | Teleport ID: The ID given by the Synchronize Player Position packet. |
 
+---
+
 ### BLOCK_ENTITY_TAG_QUERY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4411,6 +4750,8 @@ Used when F3+I is pressed while looking at a block.
 | `VAR_INT` | Transaction ID: An incremental ID so that the client can verify that the response matches. |
 | `POSITION` | Location: The location of the block to check. |
 
+---
+
 ### BUNDLE_ITEM_SELECTED
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4425,6 +4766,8 @@ Used when F3+I is pressed while looking at a block.
 | `VAR_INT` | Slot in Bundle |
 | `VAR_INT` | Slot of Bundle |
 | `VAR_INT` | Slot in Bundle |
+
+---
 
 ### CHANGE_DIFFICULTY
 
@@ -4443,6 +4786,8 @@ Must have at least op level 2 to use.  Appears to only be used on singleplayer; 
 | --- | --- |
 | `BYTE` | New difficulty: 0: peaceful, 1: easy, 2: normal, 3: hard. |
 
+---
+
 ### CHANGE_GAME_MODE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4459,6 +4804,8 @@ Requests for the server to update our game mode. Has no effect on vanilla server
 | --- | --- |
 | `VAR_INT` | Game mode: 0: survival, 1: creative, 2: adventure, 3: spectator. |
 | `VAR_INT` | Game mode: 0: survival, 1: creative, 2: adventure, 3: spectator. |
+
+---
 
 ### CHAT
 
@@ -4505,6 +4852,8 @@ The client's chat private key is used for the message signature. |
 | `FIXED_BITSET` | Acknowledged: Bitmask of which message signatures from the last seen set were used to sign this message. The most recent is the highest bit. If there are fewer than 20 messages in the last seen set, the lower bits will be zeros. |
 | `BYTE` | Checksum |
 
+---
+
 ### CHAT_ACK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4518,6 +4867,8 @@ The client's chat private key is used for the message signature. |
 | Type | Description |
 | --- | --- |
 | `VAR_INT` | Message Count |
+
+---
 
 ### CHAT_COMMAND
 
@@ -4534,6 +4885,8 @@ The client's chat private key is used for the message signature. |
 | --- | --- |
 | `STRING` | Command: The command typed by the client excluding the /. |
 | `STRING` | Command: The command typed by the client excluding the /. |
+
+---
 
 ### CHAT_COMMAND_SIGNED
 
@@ -4556,12 +4909,16 @@ The client's chat private key is used for the message signature. |
 | `FIXED_BITSET` | Acknowledged |
 | `BYTE` | Checksum |
 
+---
+
 ### CHAT_PREVIEW
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.19 | 0x5 | 5 |
 | 1.19.1 | 0x6 | 6 |
+
+---
 
 ### CHAT_SESSION_UPDATE
 
@@ -4582,6 +4939,8 @@ The client's chat private key is used for the message signature. |
 | `BYTE` | Public Key: A byte array of an X.509-encoded public key. |
 | `BYTE` | Key Signature: The signature consists of the player UUID, the key expiration timestamp, and the public key data. These values are hashed using SHA-1 and signed using Mojang's private RSA key. |
 
+---
+
 ### CHUNK_BATCH_RECEIVED
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4601,6 +4960,8 @@ Notifies the server that the chunk batch has been received by the client. The se
 | --- | --- |
 | `FLOAT` | Chunks per tick: Desired chunks per tick. |
 | `FLOAT` | Chunks per tick: Desired chunks per tick. |
+
+---
 
 ### CLIENT_COMMAND
 
@@ -4625,6 +4986,8 @@ Notifies the server that the chunk batch has been received by the client. The se
 | Type | Description |
 | --- | --- |
 | `VAR_INT` | Action ID: See below |
+
+---
 
 ### CLIENT_INFORMATION
 
@@ -4671,6 +5034,8 @@ Sent when the player connects, or when settings are changed.
 | `BOOLEAN` | Allow server listings: Servers usually list online players; this option should let you not show up in that list. |
 | `VAR_INT` | Particle Status: 0: all, 1: decreased, 2: minimal |
 
+---
+
 ### CLIENT_TICK_END
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4684,6 +5049,8 @@ Sent when the player connects, or when settings are changed.
 | --- | --- |
 | `SERVER` | Play: no fields |
 | `SERVER` | Play: no fields |
+
+---
 
 ### COMMAND_SUGGESTION
 
@@ -4715,6 +5082,8 @@ Sent when the client needs to tab-complete a minecraft:ask_server suggestion typ
 | `VAR_INT` | Transaction Id: The ID of the transaction that the server will send back to the client in the response of this packet. Client generates this and increments it each time it sends another tab completion that doesn't get a response. |
 | `STRING` | Text: All the text behind the cursor including the / (e.g. to the left of the cursor in left-to-right languages like English). |
 
+---
+
 ### CONFIGURATION_ACKNOWLEDGED
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4734,6 +5103,8 @@ Sent by the client upon receiving a Start Configuration packet from the server.
 | --- | --- |
 | `SERVER` | Play: no fields |
 
+---
+
 ### CONTAINER_ACK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4744,6 +5115,8 @@ Sent by the client upon receiving a Start Configuration packet from the server.
 | 1.12.1 | 0x5 | 5 |
 | 1.13 | 0x6 | 6 |
 | 1.14 - 1.16.2 | 0x7 | 7 |
+
+---
 
 ### CONTAINER_BUTTON_CLICK
 
@@ -4775,6 +5148,8 @@ Used when clicking on window buttons. Until 1.14, this was only used by enchantm
 | --- | --- |
 | `VAR_INT` | Window ID: The ID of the window sent by Open Screen. |
 | `VAR_INT` | Button ID: Meaning depends on window type; see below. |
+
+---
 
 ### CONTAINER_CLICK
 
@@ -4813,6 +5188,8 @@ This packet is sent by the client when the player clicks on a slot in a window.
 | `HASHED_SLOT` | Slot data: New data for this slot, in the client's opinion; see below. |
 | `HASHED_SLOT` | Carried item: Item carried by the cursor. |
 
+---
+
 ### CONTAINER_CLOSE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4843,6 +5220,8 @@ This packet is sent by the client when closing a window. vanilla clients send a 
 | --- | --- |
 | `VAR_INT` | Window ID: This is the ID of the window that was closed. 0 for player inventory. |
 
+---
+
 ### CONTAINER_SLOT_STATE_CHANGED
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4862,6 +5241,8 @@ This packet is sent by the client when toggling the state of a Crafter.
 | --- | --- |
 | `VAR_INT` | Slot ID: This is the ID of the slot that was changed. |
 | `VAR_INT` | Window ID: This is the ID of the window that was changed. |
+
+---
 
 ### COOKIE_RESPONSE
 
@@ -4886,11 +5267,15 @@ Response to a Cookie Request (login) from the server. The vanilla server only ac
 | `STRING` | Key: The identifier of the cookie. |
 | `BYTE` | Payload: The data of the cookie. |
 
+---
+
 ### CRAFTING_RECIPE_PLACEMENT
 
 | Version Range | ID (hex) | ID (dec) |
 | --- | --- | --- |
 | 1.12 | 0x1 | 1 |
+
+---
 
 ### CUSTOM_CLICK_ACTION
 
@@ -4910,6 +5295,8 @@ Sent when the client clicks a Text Component with the minecraft:custom click act
 | `NBT` | Payload: The data to send with the click action. May be a TAG_END (0). |
 | `STRING` | ID: The identifier for the click action. |
 | `NBT` | Payload: The data to send with the click action. May be a TAG_END (0). |
+
+---
 
 ### CUSTOM_PAYLOAD
 
@@ -4945,6 +5332,8 @@ Mods and plugins can use this to send their data. Minecraft itself uses some plu
 | `STRING` | Channel: Name of the plugin channel used to send the data. |
 | `BYTE` | Data: Any data, depending on the channel. minecraft: channels are documented here. The length of this array must be inferred from the packet length. |
 
+---
+
 ### DEBUG_SAMPLE_SUBSCRIPTION
 
 | Version Range | ID (hex) | ID (dec) |
@@ -4965,6 +5354,8 @@ Subscribes to the specified type of debug sample data, which is then sent period
 0 - Tick time |
 | `VAR_INT` | Sample Type: The type of debug sample to subscribe to. Can be one of the following:
 0 - Tick time |
+
+---
 
 ### EDIT_BOOK
 
@@ -4994,6 +5385,8 @@ Subscribes to the specified type of debug sample data, which is then sent period
 | `STRING` | Entries: Text from each page. Maximum string length is 1024 chars. |
 | `STRING` | Title: Title of book. Present if book is being signed, not present if book is being edited. |
 
+---
+
 ### ENTITY_TAG_QUERY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5021,6 +5414,8 @@ Used when F3+I is pressed while looking at an entity.
 | --- | --- |
 | `VAR_INT` | Transaction ID: An incremental ID so that the client can verify that the response matches. |
 | `VAR_INT` | Entity ID: The ID of the entity to query. |
+
+---
 
 ### INTERACT
 
@@ -5066,6 +5461,8 @@ This packet is sent from the client to the server when the client attacks or rig
 | `VAR_INT` | Hand: Only if Type is interact or interact at; 0: main hand, 1: off hand. |
 | `BOOLEAN` | Sneak Key Pressed: If the client is pressing the sneak key. Has the same effect as a Player Command Press/Release sneak key preceding the interaction, and the state is permanently changed. |
 
+---
+
 ### JIGSAW_GENERATE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5096,6 +5493,8 @@ Sent when Generate is pressed on the Jigsaw Block interface.
 | `POSITION` | Location: Block entity location. |
 | `VAR_INT` | Levels: Value of the levels slider/max depth to generate. |
 | `BOOLEAN` | Keep Jigsaws |
+
+---
 
 ### KEEP_ALIVE
 
@@ -5130,6 +5529,8 @@ The server will frequently send out a keep-alive (see Clientbound Keep Alive), e
 | `LONG` | Keep Alive ID |
 | `LONG` | Keep Alive ID |
 
+---
+
 ### LOCK_DIFFICULTY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5157,6 +5558,8 @@ Must have at least op level 2 to use.  Appears to only be used on singleplayer; 
 | --- | --- |
 | `BOOLEAN` | Locked |
 | `BOOLEAN` | Locked |
+
+---
 
 ### MOVE_PLAYER_POS
 
@@ -5192,6 +5595,8 @@ Updates the player's XYZ position on the server. If the player is in a vehicle, 
 | `DOUBLE` | Feet Y: Absolute feet position, normally Head Y - 1.62. |
 | `DOUBLE` | Z: Absolute position. |
 | `BYTE` | Flags: Bit field: 0x01: on ground, 0x02: pushing against wall. |
+
+---
 
 ### MOVE_PLAYER_POS_ROT
 
@@ -5230,6 +5635,8 @@ A combination of Move Player Rotation and Move Player Position.
 | `FLOAT` | Pitch: Absolute rotation on the Y Axis, in degrees. |
 | `BYTE` | Flags: Bit field: 0x01: on ground, 0x02: pushing against wall. |
 
+---
+
 ### MOVE_PLAYER_ROT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5264,6 +5671,8 @@ Updates the direction the player is looking in. Yaw is measured in degrees and d
 | `FLOAT` | Pitch: Absolute rotation on the Y Axis, in degrees. |
 | `BYTE` | Flags: Bit field: 0x01: on ground, 0x02: pushing against wall. |
 
+---
+
 ### MOVE_PLAYER_STATUS_ONLY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5295,6 +5704,8 @@ This packet, as well as Set Player Position, Set Player Rotation, and Set Player
 | Type | Description |
 | --- | --- |
 | `BYTE` | Flags: Bit field: 0x01: on ground, 0x02: pushing against wall. |
+
+---
 
 ### MOVE_VEHICLE
 
@@ -5332,6 +5743,8 @@ Sent when a player moves in a client-side-controlled vehicle. Fields are the sam
 | `FLOAT` | Pitch: Absolute rotation on the horizontal axis, in degrees. |
 | `BOOLEAN` | On Ground: (This value does not seem to exist) |
 
+---
+
 ### PADDLE_BOAT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5366,6 +5779,8 @@ Used to visually update whether boat paddles are turning.  The server will updat
 | `BOOLEAN` | Left paddle turning |
 | `BOOLEAN` | Right paddle turning |
 
+---
+
 ### PICK_ITEM
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5382,6 +5797,8 @@ Used to visually update whether boat paddles are turning.  The server will updat
 | 1.20.3 | 0x1D | 29 |
 | 1.20.5 | 0x20 | 32 |
 | 1.21.2 | 0x22 | 34 |
+
+---
 
 ### PICK_ITEM_FROM_BLOCK
 
@@ -5403,6 +5820,8 @@ Used for pick block functionality (middle click) on blocks to retrieve items fro
 | `POSITION` | Location: The location of the block. |
 | `BOOLEAN` | Include Data: Used to tell the server to include block data in the new stack, works only if in creative mode. |
 
+---
+
 ### PICK_ITEM_FROM_ENTITY
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5423,6 +5842,8 @@ Used for pick block functionality (middle click) on entities to retrieve items f
 | `VAR_INT` | Entity ID: The ID of the entity to pick. |
 | `BOOLEAN` | Include Data: Unused by the vanilla server. |
 
+---
+
 ### PING_REQUEST
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5440,6 +5861,8 @@ Used for pick block functionality (middle click) on entities to retrieve items f
 | --- | --- |
 | `LONG` | Timestamp: May be any number, but vanilla clients will always use the timestamp in milliseconds. |
 | `LONG` | Payload: May be any number. vanilla clients use a system-dependent time value, which is counted in milliseconds. |
+
+---
 
 ### PLACE_RECIPE
 
@@ -5476,6 +5899,8 @@ This packet is sent when a player clicks a recipe in the crafting book that is c
 | `VAR_INT` | Recipe ID: ID of recipe previously defined in Recipe Book Add. |
 | `BOOLEAN` | Make all: Affects the amount of items processed; true if shift is down when clicked. |
 
+---
+
 ### PLAYER_ABILITIES
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5507,6 +5932,8 @@ The vanilla client sends this packet when the player starts/stops flying with th
 | Type | Description |
 | --- | --- |
 | `BYTE` | Flags: Bit mask. 0x02: is flying. |
+
+---
 
 ### PLAYER_ACTION
 
@@ -5547,6 +5974,8 @@ Sent when the player mines a block. A vanilla server only accepts digging packet
 | `BYTE` | Face: The face being hit (see below). |
 | `VAR_INT` | Sequence: Block change sequence number (see #Acknowledge Block Change). |
 
+---
+
 ### PLAYER_COMMAND
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5584,6 +6013,8 @@ Sent by the client to indicate that it has performed certain actions: sprinting,
 | `VAR_INT` | Action ID: The ID of the action, see below. |
 | `VAR_INT` | Jump Boost: Only used by the “start jump with horse” action, in which case it ranges from 0 to 100. In all other cases it is 0. |
 
+---
+
 ### PLAYER_INPUT
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5617,6 +6048,8 @@ Sent whenever the player presses or releases certain keys. The flags correspond 
 | `BYTE` | Flags: Bit mask; see below |
 | `BYTE` | Flags: Bit mask; see below |
 
+---
+
 ### PLAYER_LOADED
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5634,6 +6067,8 @@ Sent by the client to indicate that it is ready to start simulating the player. 
 | --- | --- |
 | `SERVER` | Play: no fields |
 | `SERVER` | Play: no fields |
+
+---
 
 ### PONG
 
@@ -5662,6 +6097,8 @@ Response to the clientbound packet (Ping) with the same id.
 | `INT` | ID |
 | `INT` | ID: id is the same as the ping packet |
 
+---
+
 ### RECIPE_BOOK_CHANGE_SETTINGS
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5688,6 +6125,8 @@ Replaces Recipe Book Data, type 1.
 | `BOOLEAN` | Book Open |
 | `BOOLEAN` | Filter Active |
 
+---
+
 ### RECIPE_BOOK_SEEN_RECIPE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5712,6 +6151,8 @@ Sent when recipe is first seen in recipe book. Replaces Recipe Book Data, type 0
 | --- | --- |
 | `VAR_INT` | Recipe ID: ID of recipe previously defined in Recipe Book Add. |
 
+---
+
 ### RECIPE_BOOK_UPDATE
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5720,6 +6161,8 @@ Sent when recipe is first seen in recipe book. Replaces Recipe Book Data, type 0
 | 1.13 | 0x1B | 27 |
 | 1.14 | 0x1D | 29 |
 | 1.16 | 0x1E | 30 |
+
+---
 
 ### RENAME_ITEM
 
@@ -5748,6 +6191,8 @@ Sent as a player is renaming an item in an anvil (each keypress in the anvil UI 
 | --- | --- |
 | `STRING` | Item name: The new name of the item. |
 | `STRING` | Item name: The new name of the item. |
+
+---
 
 ### RESOURCE_PACK
 
@@ -5778,6 +6223,8 @@ Sent as a player is renaming an item in an anvil (each keypress in the anvil UI 
 | `UUID` | UUID: The unique identifier of the resource pack received in the Add Resource Pack (play) request. |
 | `VAR_INT` | Result: Result ID (see below). |
 
+---
+
 ### SEEN_ADVANCEMENTS
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5804,6 +6251,8 @@ Sent as a player is renaming an item in an anvil (each keypress in the anvil UI 
 | `STRING` | Tab ID: Only present if action is Opened tab. |
 | `VAR_INT` | Action: 0: Opened tab, 1: Closed screen. |
 | `STRING` | Tab ID: Only present if action is Opened tab. |
+
+---
 
 ### SELECT_TRADE
 
@@ -5833,6 +6282,8 @@ When a player selects a specific trade offered by a villager NPC.
 | `VAR_INT` | Selected slot: The selected slot in the player's current (trading) inventory. |
 | `VAR_INT` | Selected slot: The selected slot in the player's current (trading) inventory. |
 
+---
+
 ### SET_BEACON
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5860,6 +6311,8 @@ Changes the effect of the current beacon.
 | --- | --- |
 | `VAR_INT` | Primary Effect: A Potion ID. |
 | `VAR_INT` | Secondary Effect: A Potion ID. |
+
+---
 
 ### SET_CARRIED_ITEM
 
@@ -5891,6 +6344,8 @@ Sent when the player changes the slot selection.
 | --- | --- |
 | `SHORT` | Slot: The slot which the player has selected (0–8). |
 
+---
+
 ### SET_COMMAND_BLOCK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5917,6 +6372,8 @@ Sent when the player changes the slot selection.
 | `VAR_INT` | Mode: 0: chain, 1: repeating, 2: impulse. |
 | `BYTE` | Flags: 0x01: Track Output (if false, the output of the previous command will not be stored within the command block); 0x02: Is conditional; 0x04: Automatic. |
 
+---
+
 ### SET_COMMAND_MINECART
 
 | Version Range | ID (hex) | ID (dec) |
@@ -5941,6 +6398,8 @@ Sent when the player changes the slot selection.
 | `VAR_INT` | Entity ID |
 | `STRING` | Command |
 | `BOOLEAN` | Track Output: If false, the output of the previous command will not be stored within the command block. |
+
+---
 
 ### SET_CREATIVE_MODE_SLOT
 
@@ -5975,6 +6434,8 @@ While the user is in the standard inventory (i.e., not a crafting bench) in Crea
 | `SHORT` | Slot: Inventory slot. |
 | `SLOT` | Clicked Item |
 
+---
+
 ### SET_JIGSAW_BLOCK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -6007,6 +6468,8 @@ Sent when Done is pressed on the Jigsaw Block interface.
 | `STRING` | Joint type: rollable if the attached piece can be rotated, else aligned. |
 | `VAR_INT` | Selection priority |
 | `VAR_INT` | Placement priority |
+
+---
 
 ### SET_STRUCTURE_BLOCK
 
@@ -6047,6 +6510,8 @@ Sent when Done is pressed on the Jigsaw Block interface.
 | `VAR_LONG` | Seed |
 | `BYTE` | Flags: 0x01: Ignore entities; 0x02: Show air; 0x04: Show bounding box; 0x08: Strict placement. |
 
+---
+
 ### SET_TEST_BLOCK
 
 | Version Range | ID (hex) | ID (dec) |
@@ -6068,6 +6533,8 @@ Updates the value of the Test Block at the given position.
 | `POSITION` | Position |
 | `VAR_INT` | Mode: 0: start, 1: log, 2: fail, 3: accept |
 | `STRING` | Message |
+
+---
 
 ### SIGN_UPDATE
 
@@ -6105,6 +6572,8 @@ This message is sent from the client to the server when the “Done” button is
 | `STRING` | Line 3: Third line of text in the sign. |
 | `STRING` | Line 4: Fourth line of text in the sign. |
 
+---
+
 ### SWING
 
 | Version Range | ID (hex) | ID (dec) |
@@ -6135,6 +6604,8 @@ Sent when the player's arm swings.
 | Type | Description |
 | --- | --- |
 | `VAR_INT` | Hand: Hand used for the animation. 0: main hand, 1: off hand. |
+
+---
 
 ### TELEPORT_TO_ENTITY
 
@@ -6167,6 +6638,8 @@ Teleports the player to the given entity.  The player must be in spectator mode.
 | --- | --- |
 | `UUID` | Target Player: UUID of the player to teleport to (can also be an entity UUID). |
 | `UUID` | Target Player: UUID of the player to teleport to (can also be an entity UUID). |
+
+---
 
 ### TEST_INSTANCE_BLOCK_ACTION
 
@@ -6204,6 +6677,8 @@ Tries to perform an action the Test Instance Block at the given position.
 | `VAR_INT` | Status: 0: cleared, 1: running, 2: finished. |
 | `PREFIXED_OPTIONAL_TEXT_COMPONENT` | Error Message |
 
+---
+
 ### USE_ITEM
 
 | Version Range | ID (hex) | ID (dec) |
@@ -6240,6 +6715,8 @@ Sent when pressing the Use Item key (default: right click) with an item in hand.
 | `VAR_INT` | Sequence: Block change sequence number (see #Acknowledge Block Change). |
 | `FLOAT` | Yaw: Player head rotation around the Y-Axis. |
 | `FLOAT` | Pitch: Player head rotation around the X-Axis. |
+
+---
 
 ### USE_ITEM_ON
 
