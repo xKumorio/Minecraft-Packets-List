@@ -1,15 +1,48 @@
-# Packet ID Reference
+# Minecraft Packet ID Reference - Complete Protocol Packet List
 
-Automatically generated for minecraft 1.21.10
+**Complete reference guide for Minecraft Java Edition packet IDs across all versions.**
 
-## Table of Contents
+This comprehensive database contains packet IDs for Minecraft protocol packets including clientbound and serverbound packets. Find packet IDs, version ranges, packet fields, and detailed descriptions for all Minecraft versions from 1.8 to latest.
 
-- [Clientbound](#clientbound)
-- [Serverbound](#serverbound)
+## 📋 Quick Navigation
 
-## Clientbound
+- [What are Minecraft Packets?](#what-are-minecraft-packets)
+- [How to Use This Reference](#how-to-use-this-reference)
+- [Packet Lists](#packet-lists)
 
-*Total packets:* 170
+## What are Minecraft Packets?
+
+Minecraft packets are the fundamental units of communication between the Minecraft client and server. Each packet has a unique ID that varies between Minecraft versions. This reference provides:
+
+- **Packet IDs** in hexadecimal and decimal formats
+- **Version ranges** showing when each packet ID is valid
+- **Packet fields** with types and descriptions
+- **Clientbound packets** - sent from server to client
+- **Serverbound packets** - sent from client to server
+
+## How to Use This Reference
+
+1. Use **Ctrl+F** (or Cmd+F on Mac) to search for a specific packet name
+2. Check the version range to find the correct packet ID for your Minecraft version
+3. Use the packet ID in hexadecimal (0x...) or decimal format
+4. Review packet fields to understand the packet structure
+
+**Total packets documented:** 241
+
+---
+
+## Packet Lists
+
+### Table of Contents
+
+- [Clientbound Packets](#clientbound) - 170 packets
+- [Serverbound Packets](#serverbound) - 71 packets
+
+---
+
+## Clientbound Packets
+
+**Clientbound packets** are sent from server to client. Total: **170 packets**.
 
 ### ADD_ENTITY
 
@@ -4711,9 +4744,9 @@ Used to enable and disable features, generally experimental ones, on the client.
 | `REGISTRY` | Array of tags: Prefixed Array |
 | `REGISTRY` | Registry to tags map: Prefixed Array |
 | `ARRAY` | Tags |
-## Serverbound
+## Serverbound Packets
 
-*Total packets:* 71
+**Serverbound packets** are sent from client to server. Total: **71 packets**.
 
 ### ACCEPT_TELEPORTATION
 
@@ -6761,3 +6794,48 @@ Sent when pressing the Use Item key (default: right click) with an item in hand.
 | `BOOLEAN` | Inside block: True when the player's head is inside of a block. |
 | `BOOLEAN` | World Border Hit: Seems to always be false, even when interacting with blocks around or outside the world border, or while the player is outside the border. |
 | `VAR_INT` | Sequence: Block change sequence number (see #Acknowledge Block Change). |
+
+---
+
+## Frequently Asked Questions (FAQ)
+
+### What is a Minecraft packet ID?
+
+A packet ID is a unique numeric identifier assigned to each type of packet in the Minecraft protocol. Packet IDs change between Minecraft versions, so you need to use the correct ID for your target version.
+
+### How do I find a packet ID for a specific Minecraft version?
+
+1. Search for the packet name using Ctrl+F (Cmd+F on Mac)
+2. Find the version range that includes your Minecraft version
+3. Use the packet ID shown in hexadecimal (0x...) or decimal format
+
+### What is the difference between clientbound and serverbound packets?
+
+- **Clientbound packets**: Sent from the Minecraft server to the client (e.g., player position updates, chat messages)
+- **Serverbound packets**: Sent from the Minecraft client to the server (e.g., player movement, chat input)
+
+### Why do packet IDs change between versions?
+
+Mojang modifies the Minecraft protocol with each update, adding new packets, removing old ones, and reorganizing packet IDs. This reference tracks these changes across all Minecraft versions.
+
+### Can I use this for Minecraft Bedrock Edition?
+
+No, this reference is specifically for **Minecraft Java Edition**. Bedrock Edition uses a completely different protocol.
+
+---
+
+## Related Resources
+
+- [Minecraft Protocol Wiki](https://wiki.vg/Minecraft_Protocol) - Official protocol documentation
+- [ViaVersion](https://github.com/ViaVersion/ViaVersion) - Protocol version translation library
+- [Minecraft Version History](https://minecraft.wiki/w/Java_Edition_version_history) - Version release dates
+
+## Keywords
+
+Minecraft packet ID, Minecraft protocol, packet reference, clientbound packets, serverbound packets, Minecraft version compatibility, protocol version, packet IDs by version, Minecraft Java Edition protocol, network protocol packets
+
+---
+
+*Last updated: 2025-11-15 14:10:04 UTC*
+
+*This reference is automatically generated from ViaVersion sources and Minecraft Wiki data.*
