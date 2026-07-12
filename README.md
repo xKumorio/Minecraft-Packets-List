@@ -4,7 +4,7 @@
 
 <br>
 
-[![Star this repo](https://img.shields.io/github/stars/xKumorio/Minecraft-Packet-ID-Reference?style=for-the-badge&logo=github&label=Star%20this%20repo&color=FFD700&labelColor=1a1a1a)](https://github.com/xKumorio/Minecraft-Packet-ID-Reference/stargazers)
+[![Star this repo](https://img.shields.io/github/stars/xKumorio/Minecraft-Packet-ID-Reference?style=for-the-badge&logo=github&label=Star%20this%20repo&color=FFD700&labelColor=1a1a1a)](https://github.com/xKumorio/Minecraft-Packet-ID-Reference)
 
 </div>
 
