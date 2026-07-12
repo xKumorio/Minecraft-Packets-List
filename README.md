@@ -1,3 +1,13 @@
+<div align="center">
+
+<img src="./assets/banner.png" alt="Minecraft Packet ID Reference" width="220">
+
+<br>
+
+[![Star this repo](https://img.shields.io/github/stars/xKumorio/Minecraft-Packet-ID-Reference?style=for-the-badge&logo=github&label=Star%20this%20repo&color=FFD700&labelColor=1a1a1a)](https://github.com/xKumorio/Minecraft-Packet-ID-Reference/stargazers)
+
+</div>
+
 # Minecraft Packet ID Reference - Complete Protocol Packet List
 
 **Complete reference guide for Minecraft Java Edition packet IDs across all versions.**
